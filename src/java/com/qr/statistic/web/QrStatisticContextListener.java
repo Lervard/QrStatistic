@@ -7,8 +7,9 @@
 
 package com.qr.statistic.web;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -19,7 +20,7 @@ import java.io.File;
  */
 public class QrStatisticContextListener implements ServletContextListener{
     
-    private static Logger LOG = Logger.getLogger(QrStatisticContextListener.class);
+    private static Logger LOG = LogManager.getLogger(QrStatisticContextListener.class);
     
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
@@ -32,12 +33,8 @@ public class QrStatisticContextListener implements ServletContextListener{
         File confFile = new File(realPath, "conf");
         System.out.println("config path: " + confFile.getAbsolutePath());
         System.err.println("config path: " + confFile.getAbsolutePath());
-
-
-        //1. load log4j
-        File log4jFile = new File(confFile, "log4j2.xml");
-        System.setProperty("log4jConfiguration", log4jFile.getAbsolutePath());
-
+        
+        
         LOG.info("config path: " + confFile.getAbsolutePath());
     }
 }

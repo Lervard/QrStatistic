@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    
+    <Properties>
+        <Property name="filename">./logs/hello.log</Property>
+    </Properties>
+
+    <appenders>
+        <File name="File" fileName="${filename}">
+            <PatternLayout>
+                <pattern>%d %p %C{5.} [%t] %m%n</pattern>
+            </PatternLayout>
+        </File>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        
+    </appenders>
+    <loggers>
+        <root level="TRACE">
+            <appender-ref ref="File"/>
+        </root>
+    </loggers>
+
+
+</configuration>
