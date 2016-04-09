@@ -13,7 +13,27 @@
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/Hello</url-pattern>
     </servlet-mapping>
-
+    
+    <servlet>
+        <servlet-name>QrProduce</servlet-name>
+        <servlet-class>com.qr.statistic.web.QrProduceServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>QrProduce</servlet-name>
+        <url-pattern>/produce</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Redirect</servlet-name>
+        <servlet-class>com.qr.statistic.web.QrRedirectServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Redirect</servlet-name>
+        <url-pattern>/redirect</url-pattern>
+    </servlet-mapping>
+    
     <listener>
         <listener-class>com.qr.statistic.web.QrStatisticContextListener</listener-class>
     </listener>

@@ -5,3 +5,9 @@
 *iml
 /web/WEB-INF/conf/
 /web/WEB-INF/lib/
+/out/
+/logs/
+/web/WEB-INF/logs/
+*.war
+/web/WEB-INF/classes/
+/lib/qrStatistic.jar
