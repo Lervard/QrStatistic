@@ -1,0 +1,7 @@
+/.idea/
+/web/lib/
+/web/conf/
+/build/
+*iml
+/web/WEB-INF/conf/
+/web/WEB-INF/lib/
