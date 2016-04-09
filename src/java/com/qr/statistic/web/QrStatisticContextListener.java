@@ -33,9 +33,11 @@ public class QrStatisticContextListener implements ServletContextListener{
         System.out.println("config path: " + confFile.getAbsolutePath());
         System.err.println("config path: " + confFile.getAbsolutePath());
 
+
         //1. load log4j
         File log4jFile = new File(confFile, "log4j2.xml");
-        PropertyConfigurator.configureAndWatch(log4jFile.getAbsolutePath());
+        System.setProperty("log4jConfiguration", log4jFile.getAbsolutePath());
+
         LOG.info("config path: " + confFile.getAbsolutePath());
     }
 }
