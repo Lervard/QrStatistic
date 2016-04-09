@@ -2,7 +2,7 @@
 <configuration>
     
     <Properties>
-        <Property name="filename">./log/hello.log</Property>
+        <Property name="filename">./logs/hello.log</Property>
     </Properties>
 
     <appenders>
