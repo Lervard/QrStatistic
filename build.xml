@@ -74,10 +74,9 @@
             <files>
                 <include name="${war.name}.war"></include>
             </files>
-            <fileset dir="${deploy.dir}">
-                <include name="${war.name}/*"/>
-            </fileset>
         </delete>
+        <delete dir="${deploy.dir}/${war.name}"/>
+        
         <copy todir="${deploy.dir}">
             <fileset dir="${basedir}">
                 <include name="*.war"/>
